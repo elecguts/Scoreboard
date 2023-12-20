@@ -55,7 +55,7 @@ function clickOnTeamTwoMinusButton() {
     teamTwoScoreContents.textContent = `${teamTwoScore}`
   }
 }
-function teamOneInputChanged(event: any) {
+function teamOneInputChanged(event: Event) {
   const inputThatWasChanged = event.target
 
   if (inputThatWasChanged instanceof HTMLInputElement) {
@@ -66,7 +66,7 @@ function teamOneInputChanged(event: any) {
     }
   }
 }
-function teamTwoInputChanged(event: any) {
+function teamTwoInputChanged(event: Event) {
   const inputThatWasChanged = event.target
 
   if (inputThatWasChanged instanceof HTMLInputElement) {
