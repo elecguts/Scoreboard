@@ -15,6 +15,18 @@ const teamTwoNameInput = document.querySelector('section.team2 input')
 const teamOneNameText = document.querySelector('section.team1 h2')
 const teamTwoNameText = document.querySelector('section.team2 h2')
 
+const resetButton = document.querySelector('h1 button')
+
+function clickOnResetButton() {
+  teamOneScore = 0
+  if (teamOneScoreContents) {
+    teamOneScoreContents.textContent = `${teamOneScore}`
+  }
+  teamTwoScore = 0
+  if (teamTwoScoreContents) {
+    teamTwoScoreContents.textContent = `${teamTwoScore}`
+  }
+}
 function clickOnTeamOnePlusButton() {
   if (teamOneScore === 21) {
     return
@@ -90,3 +102,4 @@ minusButton?.addEventListener('click', clickOnTeamOneMinusButton)
 minusButton2?.addEventListener('click', clickOnTeamTwoMinusButton)
 teamOneNameInput?.addEventListener('input', teamOneInputChanged)
 teamTwoNameInput?.addEventListener('input', teamTwoInputChanged)
+resetButton?.addEventListener('click', clickOnResetButton)
