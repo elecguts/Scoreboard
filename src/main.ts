@@ -26,6 +26,18 @@ function clickOnResetButton() {
   if (teamTwoScoreContents) {
     teamTwoScoreContents.textContent = `${teamTwoScore}`
   }
+  if (teamOneNameText) {
+    teamOneNameText.textContent = 'Team 1'
+  }
+  if (teamOneNameInput instanceof HTMLInputElement) {
+    teamOneNameInput.value = ''
+  }
+  if (teamTwoNameText) {
+    teamTwoNameText.textContent = 'Team 2'
+  }
+  if (teamTwoNameInput instanceof HTMLInputElement) {
+    teamTwoNameInput.value = ''
+  }
 }
 function clickOnTeamOnePlusButton() {
   if (teamOneScore === 21) {
