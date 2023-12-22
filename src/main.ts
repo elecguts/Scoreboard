@@ -12,12 +12,8 @@ const minusButton2 = document.querySelector('section.team2 .subtract')
 
 const teamOneNameInput = document.querySelector('section.team1 input')
 const teamTwoNameInput = document.querySelector('section.team2 input')
-console.log(teamOneNameInput)
-console.log(teamTwoNameInput)
 const teamOneNameText = document.querySelector('section.team1 h2')
 const teamTwoNameText = document.querySelector('section.team2 h2')
-console.log(teamOneNameText)
-console.log(teamTwoNameText)
 
 function clickOnTeamOnePlusButton() {
   if (teamOneScore === 21) {
@@ -27,6 +23,11 @@ function clickOnTeamOnePlusButton() {
   if (teamOneScoreContents) {
     teamOneScoreContents.textContent = `${teamOneScore}`
   }
+  if (teamOneScore === 21) {
+    setTimeout(function () {
+      window.alert(`${teamOneNameText?.textContent} wins!`)
+    }, 500)
+  }
 }
 function clickOnTeamTwoPlusButton() {
   if (teamTwoScore === 21) {
@@ -35,6 +36,11 @@ function clickOnTeamTwoPlusButton() {
   teamTwoScore = teamTwoScore + 1
   if (teamTwoScoreContents) {
     teamTwoScoreContents.textContent = `${teamTwoScore}`
+  }
+  if (teamTwoScore === 21) {
+    setTimeout(function () {
+      window.alert(`${teamTwoNameText?.textContent} wins!`)
+    }, 500)
   }
 }
 function clickOnTeamOneMinusButton() {
@@ -77,6 +83,7 @@ function teamTwoInputChanged(event: Event) {
     }
   }
 }
+
 addButton?.addEventListener('click', clickOnTeamOnePlusButton)
 addButton2?.addEventListener('click', clickOnTeamTwoPlusButton)
 minusButton?.addEventListener('click', clickOnTeamOneMinusButton)
